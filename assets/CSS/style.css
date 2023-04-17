@@ -1,0 +1,8 @@
+*{
+    font-family: Helvetica, sans-serif;
+        cursor: url(https://cur.cursors-4u.net/anime/ani-11/ani1019.cur), auto !important;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(186, 121, 201) , rgb(108, 54, 208));
+}
