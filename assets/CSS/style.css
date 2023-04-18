@@ -9,11 +9,17 @@
     margin: auto;
     object-fit: cover;
 }
-
+#imgCarrusel{
+    width: 500px;
+    height: 500px;
+    border-color: #212529;
+    border-radius: 2rem;
+}
 #silueta {
     height: 60px;
     margin-left: 1rem;
     margin-right: 1rem;
+    border-radius: 2rem;
 }
 
 body {
@@ -45,7 +51,7 @@ nav {
 input[type="text"],
 button {
     border: 2px solid #212529;
-    border-radius: 2px;
+    border-radius:10px;
 }
 
 button {
@@ -59,11 +65,12 @@ button {
 .container {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    border-radius: 1px;
 }
 
 .btn {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
 }
 
 /* Alinear y espaciar los elementos de manera consistente */

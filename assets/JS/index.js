@@ -13,10 +13,10 @@ console.log(name)
                 `
      <div class="mb-3 d-flex mx-auto align-items-center col-6 ">
         <div class="card text-center border border-warning" style="width: 100%;">
-         <h5 class="card-title">Nombre: ${digimones[0].name}</h5>
+         <h5 class="card-title text-uppercase mt-4 fs-1 text fw-bold">${digimones[0].name}</h5>
          <div class="card-body">
              <img src="${digimones[0].img}" class="card-img-top" alt="...">
-             <p class="card-text">Nivel: ${digimones[0].level}</p>
+             <p class="card-text fs-3 text">Nivel: ${digimones[0].level}</p>
          </div>
         </div>
      </div>
