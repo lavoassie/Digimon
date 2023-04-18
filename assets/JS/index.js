@@ -1,4 +1,5 @@
 function buscarDigimon(event) {
+    event.preventDefault();
     console.log("me ejecuto");
 
     let name = document.getElementById("ingresarValor").value;
@@ -15,15 +16,15 @@ console.log(name)
         <div class="card" style="width: 100%;">
          <h5 class="card-title">Nombre: ${digimones[0].name}</h5>
          <div class="card-body">
-             <img src="${digimones.img}" class="card-img-top" alt="...">
-             <p class="card-text">Nivel: ${digimones.level}</p>
+             <img src="${digimones[0].img}" class="card-img-top" alt="...">
+             <p class="card-text">Nivel: ${digimones[0].level}</p>
          </div>
         </div>
      </div>
         `
             document.getElementById("tarjetas_digimones").innerHTML = html
         })
-        .catch(error => console.log("entro aquí"));
+        .catch(error => console.log("Tenemos un error"));
 }
 
 
