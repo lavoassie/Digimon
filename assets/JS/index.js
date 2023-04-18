@@ -26,6 +26,34 @@ console.log(name)
         .catch(error => console.log("Tenemos un error"));
 }
 
+function listarDigimones() {
+    console.log(listarDigimones);
+fetch('https://digimon-api.vercel.app/api/digimon')
+    .then(response => response.json())
+    .then(digimones => {
+        console.log(digimones)
+        let tarjeta = document.getElementById("tarjetas_digimones")
+        let html = ''
+        for (let digimon of digimones) {
+            html +=
+                `
+    <div class="col-xl-3 col-lg-4 mb-4 mb-md-3 col-md-6 col-sm-12">
+      <div class="card text-center border border-warning" style="width: 100%;">
+         <h5 class="card-title text-uppercase mt-3 fw-bold">${digimon.name}</h5>
+            <div class="card-body">
+              <img src="${digimon.img}" class="card-img-top" alt="...">
+              <p class="card-text">Nivel: ${digimon.level}</p>
+            </div>
+      </div>
+    </div>
+`
+        }
+        tarjeta.innerHTML = html
+
+    })
+
+    .catch(error => console.log(error))
+}
 
 fetch('https://digimon-api.vercel.app/api/digimon')
     .then(response => response.json())
