@@ -1,17 +1,19 @@
-function buscarDigimon() {
-    let name = document.getElementById("ingresarValor").value;
+function buscarDigimon(event) {
+    console.log("me ejecuto");
 
-    fetch(`https://digimon-api.vercel.app/api/digimon/${name}`)
+    let name = document.getElementById("ingresarValor").value;
+console.log(name)
+    fetch(`https://digimon-api.vercel.app/api/digimon/name/${name}`)
         .then(response => response.json())
         .then(digimones => {
-            console.log(digimones)
+            console.log(digimones[0])
             document.getElementById("tarjetas_digimones").innerHTML = ''
             let html = ''
             html +=
                 `
      <div class="col-lg-4 mb-3 col-md-6 col-sm-12">
         <div class="card" style="width: 100%;">
-         <h5 class="card-title">Nombre: ${digimones.name}</h5>
+         <h5 class="card-title">Nombre: ${digimones[0].name}</h5>
          <div class="card-body">
              <img src="${digimones.img}" class="card-img-top" alt="...">
              <p class="card-text">Nivel: ${digimones.level}</p>
@@ -21,7 +23,7 @@ function buscarDigimon() {
         `
             document.getElementById("tarjetas_digimones").innerHTML = html
         })
-        .catch(error => console.log(error));
+        .catch(error => console.log("entro aquí"));
 }
 
 
